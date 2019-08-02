@@ -10,7 +10,7 @@ server:
 spring: 
     profiles: dev
     application: 
-    name: ioutsourcing-config-eureka-client
+        name: ioutsourcing-config-eureka-client
     
 eureka: 
     instance: 
@@ -28,7 +28,7 @@ server:
 spring: 
     profiles: test
     application: 
-    name: ioutsourcing-config-eureka-client
+        name: ioutsourcing-config-eureka-client
     
 eureka: 
     instance: 
