@@ -2,6 +2,7 @@ spring:
     profiles: 
         active: 
         - dev
+        
 ---
 server: 
     port: 7001
@@ -9,7 +10,25 @@ server:
 spring: 
     profiles: dev
     application: 
-    name: ioutSourcing-config-eureka-client
+    name: ioutsourcing-config-eureka-client
+    
+eureka: 
+    instance: 
+        hostname: eureka01.com
+    client: 
+        register-with-eureka: false #当前的eureka-server自己不注册进服务列表中
+        fetch-register: false #不通过eureka获取注册信息
+        service-url: 
+            defaultZone: http://eureka01.com:7001/eureka/
+            
+---
+server: 
+    port: 7001
+    
+spring: 
+    profiles: test
+    application: 
+    name: ioutsourcing-config-eureka-client
     
 eureka: 
     instance: 
