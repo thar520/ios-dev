@@ -1,10 +1,12 @@
 spring: 
-	profiles: 
-		active: 
-		- dev
+    profiles: 
+        active: 
+        - dev
+        
 ---
 server: 
-	port: 8001
+    port: 7001
+    
 spring: 
    application: 
      name: ioutSourcing-core
