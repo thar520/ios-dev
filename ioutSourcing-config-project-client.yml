@@ -26,6 +26,15 @@ eureka:
    instance: 
       instance-id: Jerry-core
       perfer-ip-address: true
+zuul: 
+   #设置请求超时时间
+   connect-timeout-millis: 1500
+   socket-timeout-millis: 60000
+   errorControllerUrl: /error
+   ignored-services: ioutsourcing-core
+   routes: 
+      myjerry.serviceId: ioutsourcing-core
+      myjerry.path: /myjerry/**
       
 info: 
    app.name: IoutSourcing_core
